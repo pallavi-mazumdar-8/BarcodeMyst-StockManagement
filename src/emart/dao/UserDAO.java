@@ -41,7 +41,7 @@ public static boolean isUserPresent(String empid) throws SQLException
 {
 Connection conn=DBConnection.getConnection();
 
-PreparedStatement ps=conn.prepareStatement("select 1 from users where empid=?");
+PreparedStatement ps=conn.prepareStatement("select 1 from user where empid=?");
 ps.setString(1, empid);
 
 ResultSet rs=ps.executeQuery();

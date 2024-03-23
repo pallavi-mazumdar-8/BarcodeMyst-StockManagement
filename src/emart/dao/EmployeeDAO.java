@@ -96,7 +96,8 @@ public class EmployeeDAO {
       rs.next();
       EmployeePojo e=new EmployeePojo();
       
-      
+       
+       e = new EmployeePojo();
       e.setEmpid(rs.getString(1));
       e.setEmpname(rs.getString(2));
       e.setJob(rs.getString(3));

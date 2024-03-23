@@ -24,6 +24,7 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
     public ViewReceptionistFrame() {
         initComponents();
         loadReceptionistDetail();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -40,8 +41,9 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtAllRecep = new javax.swing.JTable();
-        btnBack = new javax.swing.JButton();
-        btnLogout = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btnBack7 = new javax.swing.JButton();
+        btnLogout2 = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -57,6 +59,8 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
         jtAllRecep.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,17 +80,22 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jtAllRecep);
 
-        btnBack.setText("jButton1");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setText("View All Receptionistist");
+
+        btnBack7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnBack7.setText("Back");
+        btnBack7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
+                btnBack7ActionPerformed(evt);
             }
         });
 
-        btnLogout.setText("jButton2");
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnLogout2.setText("Logout");
+        btnLogout2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
+                btnLogout2ActionPerformed(evt);
             }
         });
 
@@ -95,29 +104,35 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(btnBack)
+                .addGap(57, 57, 57)
+                .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnLogout)
-                        .addGap(21, 21, 21))))
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnBack7)
+                        .addGap(57, 57, 57)
+                        .addComponent(btnLogout2))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(btnLogout)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnBack)
-                .addGap(9, 9, 9))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnBack7)
+                            .addComponent(btnLogout2))
+                        .addGap(27, 27, 27)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,17 +149,18 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-       LoginFrame login=new LoginFrame();
-       login.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_btnLogoutActionPerformed
+    private void btnBack7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack7ActionPerformed
+                                              
+        ManageReceptionistFrame mrecp=new ManageReceptionistFrame();
+        mrecp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBack7ActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-       ManageReceptionistFrame mrecep=new ManageReceptionistFrame();
-       mrecep.setVisible(true);
-       this.dispose();
-    }//GEN-LAST:event_btnBackActionPerformed
+    private void btnLogout2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogout2ActionPerformed
+        LoginFrame login=new LoginFrame();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnLogout2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,8 +198,9 @@ public class ViewReceptionistFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnBack7;
+    private javax.swing.JButton btnLogout2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
