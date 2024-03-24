@@ -7,7 +7,7 @@ Paperwork elimination,
 Employee and stock management.
 
 
-Tools and Technologies
+Tools and Technologies are
 Java Language,
 Netbeans 8.0.2,
 SQL,
